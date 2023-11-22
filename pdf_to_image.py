@@ -11,12 +11,12 @@ mat = fitz.Matrix(zoom_x, zoom_y)  # zoom factor 2 in each dimension
 path = 'data/'
 all_files = glob.glob(path + "*.pdf")
 
-output_dir = "output"
+output_dir = "images"
 input_dir = os.getcwd()
 
 if os.path.exists(output_dir):
     shutil.rmtree(output_dir)
-    
+
 os.makedirs(output_dir, exist_ok=True)
 
 for filename in all_files:
